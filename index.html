@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Unlock ❤️</title>
+<style>
+body{
+  background:#8b0000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:Arial;
+}
+.box{
+  background:#fff;
+  padding:20px;
+  width:90%;
+  max-width:320px;
+  border-radius:20px;
+  text-align:center;
+}
+input{
+  width:90%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+button{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:#c00;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+  <h2>🎄 Christmas 🎄</h2>
+  <p>اكتب الباسورد</p>
+  <input id="pass" type="password" placeholder="Password">
+  <br>
+  <button onclick="check()">Unlock 🔓</button>
+</div>
+
+<script>
+function check(){
+  if(document.getElementById("pass").value === "2004"){
+    window.location.href = "love.html";
+  }else{
+    alert("الباسورد غلط ي عسل 😂");
+  }
+}
+</script>
+</body>
+</html>
