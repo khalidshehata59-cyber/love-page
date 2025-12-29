@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especially For You</title>
+
+    <style>
+        :root {
+            --main-pink: #ff4d7d;
+            --light-pink: #fff0f3;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-pink);
+            background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        #lock-screen {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .lock-icon {
+            font-size: 50px;
+        }
+
+        h1 {
+            color: var(--main-pink);
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 25px;
+            border: 2px solid var(--main-pink);
+            text-align: center;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .btn {
+            background: var(--main-pink);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .error-msg {
+            color: red;
+            display: none;
+        }
+
+        #main-content {
+            display: none;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            border-bottom: 2px dashed #ffc1d1;
+            padding-bottom: 20px;
+        }
+
+        .timer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        .timer-box {
+            background: #fff5f7;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .timer-box span {
+            color: var(--main-pink);
+            display: block;
+            font-size: 20px;
+        }
+
+        .memories-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+
+        .memories-scroll img {
+            width: 200px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- شاشة القفل -->
+    <div id="lock-screen">
+        <div class="lock-icon">🔒</div>
+        <h1>Welcome maryom</h1>
+        <p>To enter, type our special date ❤️</p>
+        <input type="tel" id="dateInput" placeholder="تاريخ ميلادك">
+        <button class="btn" onclick="checkDate()">Unlock ❤️</button>
+        <p id="errorMsg" class="error-msg">غلط! ركزي شوية يا فنانة 🎨</p>
+    </div>
+
+    <!-- المحتوى -->
+    <div id="main-content">
+
+        <div class="section">
+            <h1>Especially For maryom ❤️</h1>
+            <p>My favorite person in the world</p>
+        </div>
+
+        <div class="section">
+            <h3>New Year Countdown 🎉</h3>
+            <div class="timer-grid">
+                <div class="timer-box"><span id="days">00</span>Days</div>
+                <div class="timer-box"><span id="hours">00</span>Hours</div>
+                <div class="timer-box"><span id="mins">00</span>Mins</div>
+                <div class="timer-box"><span id="secs">00</span>Secs</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Our Memories 📸</h3>
+            <div class="memories-scroll">
+                <img src="https://i.postimg.cc/d1ZDvtnx/IMG_20251229_181143.jpg">
+                <img src="https://i.postimg.cc/CMDdQ5RB/IMG_20251229_181130.jpg">
+                <img src="https://i.postimg.cc/c1Y6bCvr/IMG_20251229_181112.jpg">
+                <img src="https://i.postimg.cc/BZDtVbjF/IMG_20251229_181057.jpg">
+                <img src="https://i.postimg.cc/BZDtVbjx/IMG_20251229_181040.jpg">
+            </div>
+            
+            
+<div class="section">
+    <h3>Our Video 🎬</h3>
+    <iframe
+        width="100%"
+        height="300"
+        style="border-radius:15px;"
+        src="https://www.youtube.com/embed/O5tTBxCsA5Y"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+<div class="section">
+    <h3>كلام من قلبي ❤️</h3>
+    <p style="line-height:1.9; font-size:16px; color:#4a4a4a;">
+        أنتي مش بس حبيبتي<br>
+        أنتي الأمان اللي قلبي بيرتاح فيه<br>
+        وأحلى صدفة غيرت كل حاجة في حياتي<br><br>
+
+        وجودك في حياتي نعمة<br>
+        ضحكتك حياة<br>
+        وقربك راحة مش لاقي لها تفسير<br><br>
+
+        كل مرة أبص عليكي<br>
+        أفهم يعني إيه حب بجد<br>
+        مش كلام… دا إحساس<br><br>
+
+        أنا ممكن أستغنى عن الدنيا كلها<br>
+        بس عنك إنتي؟<br>
+        <strong>دي مستحيل ❤️</strong>
+    </p>
+</div>
+</div>
+            
+        </div>
+
+    </div>
+</div>
+
+<script>
+function checkDate() {
+    const input = document.getElementById("dateInput").value.trim();
+    const errorMsg = document.getElementById("errorMsg");
+
+    const validDates = ["28/8", "10/1"];
+
+    if (validDates.includes(input)) {
+        errorMsg.style.display = "none";
+        document.getElementById("lock-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+        startTimer();
+    } else {
+        errorMsg.style.display = "block";
+    }
+}
+
+function startTimer() {
+    const targetDate = new Date("Jan 1, 2026 00:00:00").getTime();
+
+    setInterval(() => {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+
+        if (diff < 0) return;
+
+        document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("hours").innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        document.getElementById("mins").innerText = Math.floor((diff / (1000 * 60)) % 60);
+        document.getElementById("secs").innerText = Math.floor((diff / 1000) % 60);
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
