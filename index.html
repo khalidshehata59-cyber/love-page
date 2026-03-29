@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى المستشارة المستقبلية شروق</title>
+    <style>
+        :root {
+            --dark-brown: #2d1b18; /* بني داكن جداً */
+            --maroon: #5d001e;     /* نبيتي ملكي */
+            --gold: #c5a059;       /* ذهبي هادئ */
+            --text-light: #fdf5e6;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--dark-brown), var(--maroon));
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* شاشة الباسورد */
+        #login-screen {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            z-index: 10;
+        }
+
+        input[type="password"] {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+            background: #fff;
+            margin-top: 15px;
+            width: 80%;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 30px;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover { background: #b38f48; }
+
+        /* محتوى التهنئة */
+        #main-content {
+            display: none;
+            width: 90%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: rgba(45, 27, 24, 0.85);
+            padding: 30px;
+            border-radius: 25px;
+            border: 2px solid var(--gold);
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: slideUp 1.5s ease;
+        }
+
+        h1 { color: var(--gold); font-size: 2.2rem; margin-bottom: 5px; }
+        .uni-tag { font-size: 1.1rem; color: #ccc; margin-bottom: 25px; display: block; }
+
+        .dua-section {
+            background: rgba(128, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            line-height: 2;
+            font-size: 1.2rem;
+            border-right: 4px solid var(--gold);
+        }
+
+        .highlight { color: var(--gold); font-weight: bold; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer-text { font-style: italic; color: var(--gold); margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <div style="font-size: 50px; margin-bottom: 10px;">⚖️</div>
+        <h2>بوابة المستشارة شروق</h2>
+        <p>اكتب الباسورد عشان تشوف المفاجأة</p>
+        <input type="password" id="password" placeholder="كلمة السر">
+        <br>
+        <button onclick="checkPassword()">فتح القفل</button>
+        <p id="error" style="color: #ff6b6b; display: none; margin-top: 10px;">كلمة المرور غلط يا سيادة المستشارة! ركزي 😉</p>
+    </div>
+
+    <div id="main-content">
+        <div class="card">
+            <span class="uni-tag">حقوق جامعة بني سويف 🏛️</span>
+            <h1>يا رب أشوفك أحلى مستشارة</h1>
+            <h2 style="color: var(--gold);">شروق</h2>
+            
+            <div class="dua-section">
+                اللهم وفقها في دراستها، وأنر بصيرتها، واجعل الصعب سهلاً عليها.. 
+                <br>
+                اللهم اجعل "شروق" من الناجحين المتفوقين دائماً، واكتب لها في كل خطوة نجاح وفلاح. 
+                <br>
+                <span class="highlight">يا رب نشوفك في أعلى المناصب القضائية يا بطلة!</span>
+            </div>
+
+            <p>
+                عارفين إن حقوق صعبة ومحتاجة مجهود، 
+                بس إحنا واثقين في ذكائك وإصرارك. 
+                <br>
+                بكرة الأيام دي تعدي وتكوني واقفة على المنصة وبتحكمي بالعدل.
+            </p>
+
+            <div class="footer-text">
+                مستنيين اللحظة اللي تلبسي فيها وشاح القضاء يا شروق ✨
+            </div>
+            
+            <div style="font-size: 30px; margin-top: 20px;">📖 ⚖️ 🎓</div>
+        </div>
+    </div>
+
+    <script>
+        // الباسورد هو 1001
+        function checkPassword() {
+            const pass = document.getElementById('password').value;
+            const correctPass = "1001"; 
+            
+            if (pass === correctPass) {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
